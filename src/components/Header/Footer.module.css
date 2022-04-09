@@ -1,0 +1,13 @@
+.wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.author {
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.author:hover {
+  text-decoration: underline;
+}

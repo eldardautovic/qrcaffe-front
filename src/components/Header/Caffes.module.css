@@ -1,0 +1,33 @@
+.wrapper {
+  padding-left: 20px;
+}
+
+.wrapper h1 {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.legend > * {
+  margin: 0 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 40px auto;
+}
+
+td,
+th {
+  border: 10px solid white;
+  border-radius: 50px;
+  padding: 2rem;
+}
+
+td {
+  text-align: center;
+}
