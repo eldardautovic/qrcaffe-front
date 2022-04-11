@@ -7,6 +7,7 @@ import Admin from "./pages/Admin.jsx";
 import { getCaffes } from "./store/caffes/caffeReducer";
 import { useDispatch } from "react-redux";
 import Footer from "./components/Header/Footer";
+import Caffe from "./components/Header/Caffe";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -19,7 +20,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ucp" element={<Admin />} />
+        <Route path="/ucp" element={<Admin />}></Route>
+        <Route path="/ucp/:caffeId" element={<Caffe />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
