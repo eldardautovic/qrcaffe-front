@@ -8,6 +8,8 @@ import { getCaffes } from "./store/caffes/caffeReducer";
 import { useDispatch } from "react-redux";
 import Footer from "./components/Header/Footer";
 import Caffe from "./components/Header/Caffe";
+import Statement from "./components/Header/Statement";
+import CaffePanel from "./pages/CaffePanel";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/ucp" element={<Admin />}></Route>
         <Route path="/ucp/:caffeId" element={<Caffe />} />
+        <Route path="/ucp/izvjestaj/:caffeId" element={<Statement />} />
+        <Route path="/caffe/:caffeId" element={<CaffePanel />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

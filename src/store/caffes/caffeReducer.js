@@ -34,3 +34,14 @@ export const getCaffes = () => {
       .catch((err) => alert(err));
   };
 };
+
+export const getOrders = (id) => {
+  return (dispatch) => {
+    axios
+      .get(`http://localhost:1337/orders/${id}`)
+      .then((response) => {
+        dispatch(caffeActions.setStatement(response.data));
+      })
+      .catch((err) => alert(err));
+  };
+};

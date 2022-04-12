@@ -26,7 +26,16 @@ const Caffe = () => {
       })
       .then((response) => {
         alert("Podaci uspjesno azurirani.");
-        Navigate("/ucp");
+        axios
+          .get(`http://localhost:1337/caffes/caffe/${params.caffeId}`)
+          .then((response) => {
+            setIp(response.data.ip);
+            setName(response.data.name);
+            alert("Uspjesno uredjen kafic.");
+          })
+          .catch((err) => {
+            alert("Doslo je do greske prilikom uredjivanja kafica.");
+          });
       })
       .catch((err) => alert(err));
   };
@@ -37,11 +46,9 @@ const Caffe = () => {
       .then((response) => {
         setIp(response.data.ip);
         setName(response.data.name);
-        console.log(response);
       })
       .catch((err) => {
-        Navigate("/ucp");
-        alert("err");
+        alert("Doslo je do greske prilikom dobivanja kafica.");
       });
 
     pw.current.value = "N/A";
