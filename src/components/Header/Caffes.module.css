@@ -61,4 +61,10 @@ td {
 
 .icon {
   cursor: pointer;
+  color: rgb(75, 75, 75);
+  transition: 0.3s ease all;
+}
+
+.icon:hover {
+  color: var(--color-orange);
 }

@@ -64,12 +64,12 @@ const Caffes = () => {
                   </td>
                   <td>
                     <Link to={`/ucp/izvjestaj/${el.id}`} key={el.id}>
-                      <TiDocument fontSize={20} />
+                      <TiDocument fontSize={20} className={style.icon} />
                     </Link>
                   </td>
                   <td>
                     <Link to={`/ucp/${el.id}`} key={el.id}>
-                      <BsFillPencilFill fontSize={20} />
+                      <BsFillPencilFill fontSize={20} className={style.icon} />
                     </Link>
                   </td>
                 </tr>
