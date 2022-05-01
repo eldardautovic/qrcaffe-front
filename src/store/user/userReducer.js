@@ -18,6 +18,7 @@ export const logInCaffe = (password, ip, id) => {
       .post(`http://localhost:1337/login/${id}`, {
         pass: password,
         ip: ip,
+        caffeId: id,
       })
       .then((response) => {
         console.log(response.data);
