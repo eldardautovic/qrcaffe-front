@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import CaffeHeader from "./CaffeHeader";
 import style from "./CaffeIndividualPanel.module.css";
+import { io } from "socket.io-client";
+import { useDispatch, useSelector } from "react-redux";
+import { getOrders } from "../../store/orders/ordersReducer";
+import notificationSound from "../../assets/sounds/notification.mp3";
+import Orders from "./Orders";
+
 const CaffeIndividualPanel = ({ name, id }) => {
+  const orders = useSelector((state) => state.orders.orders);
+  const dispatch = useDispatch();
+
+  const notification = new Audio(notificationSound);
+
+  useEffect(() => {
+    const socket = io(`http://localhost:1337`);
+    socket.on("createdOrder", (sock) => {
+      dispatch(getOrders(id));
+      notification.play();
+    });
+
+    dispatch(getOrders(id));
+  }, []);
+
+  useEffect(() => {
+    console.log(orders);
+  }, [orders]);
+
   return (
     <div className={style.container}>
-      <div className={style.header}>
-        <h1>Caffe panel {name}</h1>
-        <div className={style.profile}>
-          <div
-            className={style.pic}
-            style={{
-              backgroundImage: `url(https://ui-avatars.com/api/?name=${name})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          ></div>
-        </div>
-      </div>
+      <CaffeHeader name={name} />
+      {orders &&
+        orders.map((el) => {
+          return <Orders order={el} />;
+        })}
     </div>
   );
 };

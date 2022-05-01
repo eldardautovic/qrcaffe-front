@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import style from "./Caffe.module.css";
 import axios from "axios";
 import { AiOutlineRollback } from "react-icons/ai";

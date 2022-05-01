@@ -1,9 +1,14 @@
 .wrapper {
   text-align: center;
+  min-height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   margin: 40px 0;
 }
 
 .author {
+  padding-left: 5px;
   color: var(--color-black);
   font-weight: bold;
 }
