@@ -5,7 +5,6 @@ export const getOrders = (id) => {
     axios
       .get(`http://localhost:1337/orders/${id}`)
       .then((response) => {
-        console.log(response.data);
         dispatch(ordersActions.setOrders(response.data));
       })
       .catch((err) => alert(err));

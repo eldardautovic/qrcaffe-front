@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CaffeHeader from "./CaffeHeader";
 import style from "./CaffeIndividualPanel.module.css";
 import { io } from "socket.io-client";
@@ -15,24 +15,19 @@ const CaffeIndividualPanel = ({ name, id }) => {
 
   useEffect(() => {
     const socket = io(`http://localhost:1337`);
-    socket.on("createdOrder", (sock) => {
+    socket.on("createdOrder", () => {
       dispatch(getOrders(id));
       notification.play();
     });
 
     dispatch(getOrders(id));
   }, []);
-
-  useEffect(() => {
-    console.log(orders);
-  }, [orders]);
-
   return (
     <div className={style.container}>
-      <CaffeHeader name={name} />
-      {orders &&
+      <CaffeHeader name={name} id={id} />
+      {orders.length > 0 &&
         orders.map((el) => {
-          return <Orders order={el} />;
+          return <Orders key={el.id} order={el} />;
         })}
     </div>
   );

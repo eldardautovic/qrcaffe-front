@@ -11,8 +11,12 @@ const Orders = ({ order }) => {
         <h1 className={style.header}>Stol {order.tableId}</h1>
         <h4 className={style.timestamp}>{order.timestamp}</h4>
       </div>
-      {orderList.map((el) => {
-        return <p className={style.content}>{el}</p>;
+      {orderList.map((el, i) => {
+        return (
+          <p key={i} className={style.content}>
+            {el}
+          </p>
+        );
       })}
       <h4 className={style.note}>Napomena: </h4>
       <p className={style.notepara}>{order.note}</p>

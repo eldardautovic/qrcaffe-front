@@ -1,0 +1,20 @@
+.container {
+  z-index: 100;
+  overflow: hidden;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease all;
+}
+
+.container > * {
+  margin-bottom: 10px;
+}
+
+.container:last-child {
+  margin-bottom: 0;
+}

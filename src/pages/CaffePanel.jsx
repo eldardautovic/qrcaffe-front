@@ -28,14 +28,9 @@ const CaffePanel = () => {
       .get("https://geolocation-db.com/json/")
       .then((response) => {
         setIp(response.data.IPv4);
-        console.log(response.data.IPv4);
       })
       .catch((err) => alert(err.message));
   }, []);
-
-  useEffect(() => {
-    console.log(name);
-  }, [name]);
 
   return (
     <>

@@ -13,6 +13,10 @@
   border: 1px solid rgb(107, 107, 107);
 }
 
+.header .profile {
+  position: relative;
+}
+
 .header .profile .pic:hover {
   box-shadow: rgba(0, 0, 0, 0.466) 0px 5px 15px;
 }

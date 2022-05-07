@@ -21,7 +21,6 @@ export const logInCaffe = (password, ip, id) => {
         caffeId: id,
       })
       .then((response) => {
-        console.log(response.data);
         const decodedToken = jwtDecode(response.data.token);
 
         dispatch(
