@@ -12,6 +12,7 @@
 .exit {
   font-size: 1.3rem;
   text-align: right;
+  cursor: pointer;
 }
 
 .header {

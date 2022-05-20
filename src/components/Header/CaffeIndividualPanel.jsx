@@ -20,6 +20,10 @@ const CaffeIndividualPanel = ({ name, id }) => {
       notification.play();
     });
 
+    socket.on("completedOrder", () => {
+      dispatch(getOrders(id));
+    });
+
     dispatch(getOrders(id));
   }, []);
   return (

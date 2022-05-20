@@ -10,3 +10,14 @@ export const getOrders = (id) => {
       .catch((err) => alert(err));
   };
 };
+
+export const finishOrders = (id, caffeId) => {
+  return (dispatch) => {
+    axios
+      .put(`http://localhost:1337/orders/${id}`)
+      .then((response) => {
+        alert("Uspjesno zavrsena narudzba");
+      })
+      .catch((err) => alert(err));
+  };
+};
