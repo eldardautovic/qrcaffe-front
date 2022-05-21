@@ -3,7 +3,9 @@ import axios from "axios";
 export const getOrders = (id) => {
   return (dispatch) => {
     axios
-      .get(`http://localhost:1337/orders/${id}`)
+      .get(`http://localhost:1337/orders/${id}`, {
+        headers: { BearerToken: localStorage.getItem("tokenId") },
+      })
       .then((response) => {
         dispatch(ordersActions.setOrders(response.data));
       })
@@ -11,12 +13,18 @@ export const getOrders = (id) => {
   };
 };
 
-export const finishOrders = (id, caffeId) => {
+export const finishOrders = (id) => {
   return (dispatch) => {
     axios
-      .put(`http://localhost:1337/orders/${id}`)
+      .put(
+        `http://localhost:1337/orders/${id}`,
+        { id: id },
+        {
+          headers: { BearerToken: localStorage.getItem("tokenId") },
+        }
+      )
       .then((response) => {
-        alert("Uspjesno zavrsena narudzba");
+        alert(response.data);
       })
       .catch((err) => alert(err));
   };

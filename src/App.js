@@ -10,6 +10,7 @@ import Footer from "./components/Header/Footer";
 import Caffe from "./components/Header/Caffe";
 import Statement from "./components/Header/Statement";
 import CaffePanel from "./pages/CaffePanel";
+import CaffeStatement from "./components/Header/CaffeStatement";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/ucp" element={<Admin />}></Route>
         <Route path="/ucp/:caffeId" element={<Caffe />} />
         <Route path="/ucp/izvjestaj/:caffeId" element={<Statement />} />
+        <Route path="/caffe/:caffeId/izvjestaj/" element={<CaffeStatement />} />
         <Route path="/caffe/:caffeId" element={<CaffePanel />} />
         <Route path="*" element={<Home />} />
       </Routes>

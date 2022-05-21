@@ -8,7 +8,7 @@ const Modal = ({ coords, id }) => {
       className={style.container}
       style={{ left: coords.left, top: coords.top }}
     >
-      <Link to={`/izvjestaj/${id}`}>Izvjestaj</Link>
+      <Link to={`/caffe/${id}/izvjestaj`}>Izvjestaj</Link>
       <Link to={`/postavke/${id}`}>Podesavanja</Link>
       <Link to={`/logout`}>Odjava</Link>
     </div>,

@@ -38,7 +38,7 @@ export const getCaffes = () => {
 export const getOrders = (id) => {
   return (dispatch) => {
     axios
-      .get(`http://localhost:1337/orders/${id}`)
+      .get(`http://localhost:1337/orders/statement/${id}`)
       .then((response) => {
         dispatch(caffeActions.setStatement(response.data));
       })
