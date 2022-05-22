@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { logInCaffe } from "../store/user/userReducer";
 import style from "./CaffePanel.module.css";
 import CaffeIndividualPanel from "../components/Header/CaffeIndividualPanel";
+import { usePersistantLogin } from "../hooks/usePersistantLogin";
 
 const CaffePanel = () => {
   const params = useParams();
@@ -16,6 +17,8 @@ const CaffePanel = () => {
 
   const loggedIn = useSelector((state) => state.user.loggedIn);
   const name = useSelector((state) => state.user.caffeName);
+
+  usePersistantLogin();
 
   const logInUser = (event) => {
     event.preventDefault();

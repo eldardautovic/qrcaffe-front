@@ -13,6 +13,19 @@ export const getOrders = (id) => {
   };
 };
 
+export const getStatement = (id) => {
+  return (dispatch) => {
+    axios
+      .get(`http://localhost:1337/orders/caffe-statement/${id}`, {
+        headers: { BearerToken: localStorage.getItem("tokenId") },
+      })
+      .then((response) => {
+        dispatch(ordersActions.setOrders(response.data));
+      })
+      .catch((err) => alert(err));
+  };
+};
+
 export const finishOrders = (id) => {
   return (dispatch) => {
     axios

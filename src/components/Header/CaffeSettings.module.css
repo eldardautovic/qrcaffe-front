@@ -1,0 +1,42 @@
+.wrapper {
+  padding-left: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form .input {
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border: 0.5px solid rgba(133, 133, 133, 0.692);
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.buttonContainer button {
+  padding: 7px 5px;
+  outline: none;
+  border: none;
+  background-color: var(--color-orange);
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border: 0.5px solid rgba(63, 63, 63, 0.692);
+  border-radius: 2px;
+}
+
+.icon {
+  margin-bottom: 20px;
+}

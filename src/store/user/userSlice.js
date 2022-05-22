@@ -19,6 +19,7 @@ export const userSlice = createSlice({
     logOut: (state) => {
       state.loggedIn = false;
       state.caffeId = 0;
+      localStorage.removeItem("tokenId");
     },
   },
 });

@@ -18,3 +18,9 @@
 .container:last-child {
   margin-bottom: 0;
 }
+
+.headling {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
