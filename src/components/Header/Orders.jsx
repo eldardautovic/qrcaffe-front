@@ -13,9 +13,11 @@ const Orders = ({ order }) => {
 
   return (
     <div className={style.container}>
-      <h1 className={style.exit} onClick={finishOrder}>
-        Zavrsi narudzbu
-      </h1>
+      <div className={style.finishOrders}>
+        <h1 className={style.exit} onClick={finishOrder}>
+          Zavrsi narudzbu
+        </h1>
+      </div>
       <div className={style.header}>
         <h1 className={style.header}>Stol {order.tableId}</h1>
         <h4 className={style.timestamp}>{order.timestamp}</h4>

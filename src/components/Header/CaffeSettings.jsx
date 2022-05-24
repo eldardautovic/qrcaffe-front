@@ -67,7 +67,9 @@ const CaffeSettings = () => {
       </Link>
       <h1 className={style.header}>Uredi kafic: </h1>
       <form onSubmit={editCaffe} className={style.form}>
-        <label className={style.label}>Ime: {name}</label>
+        <label className={style.label}>
+          <span>Ime:</span> {name}
+        </label>
         <input
           type="text"
           placeholder={name}
@@ -76,7 +78,9 @@ const CaffeSettings = () => {
           ref={formName}
         />
 
-        <label className={style.label}>IP: {ip}</label>
+        <label className={style.label}>
+          <span>IP</span>: {ip}
+        </label>
         <input
           type="text"
           placeholder={ip}
@@ -85,7 +89,9 @@ const CaffeSettings = () => {
           ref={formIp}
         />
 
-        <label className={style.label}>Lozinka:</label>
+        <label className={style.label}>
+          <span>Lozinka:</span>
+        </label>
         <input
           type="text"
           placeholder="Lozinka..."

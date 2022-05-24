@@ -36,9 +36,7 @@ export const finishOrders = (id) => {
           headers: { BearerToken: localStorage.getItem("tokenId") },
         }
       )
-      .then((response) => {
-        alert(response.data);
-      })
+      .then((response) => {})
       .catch((err) => alert(err));
   };
 };

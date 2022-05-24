@@ -9,10 +9,18 @@
   margin-top: 50px;
 }
 
+.finishOrders {
+  display: flex;
+  justify-content: right;
+}
+
 .exit {
+  color: white;
+  font-weight: 400;
+  padding: 5px;
   font-size: 1.3rem;
-  text-align: right;
   cursor: pointer;
+  background-color: #f67555;
 }
 
 .header {
@@ -21,6 +29,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+  color: var(--color-black);
 }
 
 .header h1 {
@@ -37,13 +46,16 @@
   margin-bottom: 20px;
   width: 100px;
   overflow-wrap: normal;
+  color: var(--color-black);
 }
 
 .note {
   font-size: 1.8rem;
+  color: var(--color-black);
 }
 
 .notepara {
   font-size: 1.8rem;
   padding-left: 20px;
+  color: var(--color-black);
 }

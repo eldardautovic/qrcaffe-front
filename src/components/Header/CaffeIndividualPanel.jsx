@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getOrders } from "../../store/orders/ordersReducer";
 import notificationSound from "../../assets/sounds/notification.mp3";
 import Orders from "./Orders";
+import { FaRegSadTear } from "react-icons/fa";
 
 const CaffeIndividualPanel = ({ name, id }) => {
   const orders = useSelector((state) => state.orders.orders);
@@ -33,6 +34,13 @@ const CaffeIndividualPanel = ({ name, id }) => {
         orders.map((el) => {
           return <Orders key={el.id} order={el} />;
         })}
+
+      {orders.length <= 0 && (
+        <div className={style.noOrders}>
+          <h1 className={style.heading}>Trenutno nema narudzbi</h1>
+          <FaRegSadTear fontSize={100} color="var(--color-black)" />
+        </div>
+      )}
     </div>
   );
 };

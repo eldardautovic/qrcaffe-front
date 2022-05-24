@@ -3,10 +3,24 @@
 }
 
 .form {
+  padding-top: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
+  background-color: rgb(240, 236, 236);
+}
+
+.form label {
+  justify-self: flex-start;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.form span {
+  font-weight: 500;
 }
 
 .form .input {
@@ -15,26 +29,41 @@
   border-radius: 5px;
   outline: none;
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border: 0.5px solid rgba(133, 133, 133, 0.692);
+  background-color: var(--color-orange);
+  width: 50%;
+  transition: 0.2s ease all;
+  font-size: 1.4rem;
+}
+
+.form .input:focus {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-orange);
+}
+
+.form .input:focus::placeholder {
+  color: transparent;
 }
 
 .buttonContainer {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .buttonContainer button {
-  padding: 7px 5px;
-  outline: none;
   border: none;
-  background-color: var(--color-orange);
+  outline: none;
+  padding: 5px 40px;
+  font-size: 1.4rem;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border: 0.5px solid rgba(63, 63, 63, 0.692);
-  border-radius: 2px;
+  background-color: var(--color-white);
+  transition: 0.2s ease-in-out all;
+  border: 2px solid rgb(85, 85, 85);
+  border-radius: 20px;
+}
+.buttonContainer button:hover {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: transparent;
 }
 
 .icon {
