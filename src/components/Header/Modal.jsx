@@ -1,9 +1,9 @@
-import React from "react";
-import style from "./Modal.module.css";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import { useDispatch } from "react-redux";
 import { userActions } from "../../store/user/userSlice";
+
+import style from "./Modal.module.css";
 
 const Modal = ({ coords, id }) => {
   const dispatch = useDispatch();

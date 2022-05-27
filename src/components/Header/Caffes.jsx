@@ -1,14 +1,16 @@
-import React from "react";
-import style from "./Caffes.module.css";
-import NewCaffe from "./NewCaffe";
+import axios from "axios";
 import { useSelector } from "react-redux";
+import { caffeActions } from "../../store/caffes/caffeSlice";
+import { useDispatch } from "react-redux";
+
+import NewCaffe from "./NewCaffe";
+
 import { BsFillPencilFill } from "react-icons/bs";
 import { Link, Outlet } from "react-router-dom";
 import { AiFillDelete } from "react-icons/ai";
-import axios from "axios";
-import { caffeActions } from "../../store/caffes/caffeSlice";
-import { useDispatch } from "react-redux";
 import { TiDocument } from "react-icons/ti";
+
+import style from "./Caffes.module.css";
 const Caffes = () => {
   const caffes = useSelector((state) => state.caffe.caffes);
 

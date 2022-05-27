@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
-import CaffeHeader from "./CaffeHeader";
-import style from "./CaffeIndividualPanel.module.css";
+import { useEffect } from "react";
+
 import { io } from "socket.io-client";
 import { useDispatch, useSelector } from "react-redux";
 import { getOrders } from "../../store/orders/ordersReducer";
-import notificationSound from "../../assets/sounds/notification.mp3";
-import Orders from "./Orders";
+
 import { FaRegSadTear } from "react-icons/fa";
+
+import Orders from "./Orders";
+import CaffeHeader from "./CaffeHeader";
+
+import notificationSound from "../../assets/sounds/notification.mp3";
+import style from "./CaffeIndividualPanel.module.css";
 
 const CaffeIndividualPanel = ({ name, id }) => {
   const orders = useSelector((state) => state.orders.orders);

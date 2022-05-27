@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
+
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/Home";
-import Admin from "./pages/Admin.jsx";
 import { getCaffes } from "./store/caffes/caffeReducer";
 import { useDispatch } from "react-redux";
+
+import Home from "./pages/Home";
+import Admin from "./pages/Admin.jsx";
 import Footer from "./components/Header/Footer";
 import Caffe from "./components/Header/Caffe";
 import Statement from "./components/Header/Statement";
 import CaffePanel from "./pages/CaffePanel";
 import CaffeStatement from "./components/Header/CaffeStatement";
 import CaffeSettings from "./components/Header/CaffeSettings";
+
+import "./App.css";
+
 const App = () => {
   const dispatch = useDispatch();
 

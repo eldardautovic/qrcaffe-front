@@ -1,8 +1,7 @@
-import React from "react";
-import style from "./Home.module.css";
 import { GiCoffeeMug as Mug } from "react-icons/gi";
 import { FiLogIn as LoIcon } from "react-icons/fi";
 
+import style from "./Home.module.css";
 import eldar from "../assets/images/eldar.jpg";
 import esmin from "../assets/images/esmin.jpg";
 

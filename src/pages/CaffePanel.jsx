@@ -1,12 +1,15 @@
+import { useEffect, useRef, useState } from "react";
+
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { logInCaffe } from "../store/user/userReducer";
-import style from "./CaffePanel.module.css";
-import CaffeIndividualPanel from "../components/Header/CaffeIndividualPanel";
 import { usePersistantLogin } from "../hooks/usePersistantLogin";
+
+import CaffeIndividualPanel from "../components/Header/CaffeIndividualPanel";
 import Header from "../components/Header/Header";
+
+import style from "./CaffePanel.module.css";
 
 const CaffePanel = () => {
   const params = useParams();

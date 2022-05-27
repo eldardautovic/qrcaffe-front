@@ -1,9 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import style from "./Caffe.module.css";
+import { useEffect, useRef, useState } from "react";
+
 import axios from "axios";
+import { Link, useParams } from "react-router-dom";
+
 import { AiOutlineRollback } from "react-icons/ai";
+
 import Header from "./Header";
+
+import style from "./Caffe.module.css";
 
 const Caffe = () => {
   const params = useParams();

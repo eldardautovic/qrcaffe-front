@@ -1,7 +1,10 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+
 import { useDispatch } from "react-redux";
-import style from "./NewCaffe.module.css";
 import { createCaffe } from "../../store/caffes/caffeReducer";
+
+import style from "./NewCaffe.module.css";
+
 const NewCaffe = () => {
   const dispatch = useDispatch();
 

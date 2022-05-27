@@ -1,6 +1,6 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { finishOrders } from "../../store/orders/ordersReducer";
+
 import style from "./Orders.module.css";
 
 const Orders = ({ order }) => {

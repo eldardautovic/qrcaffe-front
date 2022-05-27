@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+
 import { logInAction } from "../store/user/userReducer";
 import { useDispatch, useSelector } from "react-redux";
-import style from "./Admin.module.css";
+
 import Form from "../components/Header/Form";
 import Caffes from "../components/Header/Caffes";
 import Header from "../components/Header/Header";
+
+import style from "./Admin.module.css";
 const Admin = () => {
   const loggedIn = useSelector((state) => state.user.loggedIn);
   const dispatch = useDispatch();

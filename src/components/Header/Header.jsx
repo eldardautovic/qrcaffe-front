@@ -1,5 +1,5 @@
-import React from "react";
 import { FaMugHot } from "react-icons/fa";
+
 import style from "./Header.module.css";
 
 const Header = () => {

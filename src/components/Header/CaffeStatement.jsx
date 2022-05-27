@@ -1,12 +1,16 @@
 import { useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getStatement } from "../../store/orders/ordersReducer";
-import style from "./CaffeStatement.module.css";
-import { IoMdCheckmark, IoMdClose } from "react-icons/io";
-import { AiOutlineRollback } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { getStatement } from "../../store/orders/ordersReducer";
+
+import { AiOutlineRollback } from "react-icons/ai";
+import { IoMdCheckmark, IoMdClose } from "react-icons/io";
+
 import Header from "./Header";
+
+import style from "./CaffeStatement.module.css";
 
 const CaffeStatement = () => {
   const orders = useSelector((state) => state.orders.orders);

@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import style from "./CaffeSettings.module.css";
+import { useEffect, useRef, useState } from "react";
+
 import axios from "axios";
-import { AiOutlineRollback } from "react-icons/ai";
-import { useDispatch } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import { userActions } from "../../store/user/userSlice";
+import { useDispatch } from "react-redux";
+
+import { AiOutlineRollback } from "react-icons/ai";
+
+import style from "./CaffeSettings.module.css";
+
 import Header from "./Header";
 
 const CaffeSettings = () => {
