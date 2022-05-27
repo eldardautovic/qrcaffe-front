@@ -6,6 +6,7 @@ import { logInCaffe } from "../store/user/userReducer";
 import style from "./CaffePanel.module.css";
 import CaffeIndividualPanel from "../components/Header/CaffeIndividualPanel";
 import { usePersistantLogin } from "../hooks/usePersistantLogin";
+import Header from "../components/Header/Header";
 
 const CaffePanel = () => {
   const params = useParams();
@@ -38,6 +39,7 @@ const CaffePanel = () => {
   return (
     <>
       <div className={style.wrapper}>
+        <Header />
         {!loggedIn && (
           <form onSubmit={logInUser} className={style.form}>
             <h1 className={style.header}>CAFFE PANEL</h1>

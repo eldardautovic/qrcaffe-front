@@ -1,6 +1,242 @@
 .wrapper {
+  background-color: white;
+  padding: 40px 5rem 0 5rem;
+}
+
+.wrapper .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .header .logo {
+  display: flex;
+  align-items: center;
+  color: var(--color-black);
+}
+
+.wrapper .header .logo .icon {
+  color: var(--color-orange);
+  margin-right: 5px;
+}
+
+.wrapper .header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  width: 30%;
+  color: var(--color-black);
+}
+
+.wrapper .header .nav a {
+  color: var(--color-black);
+  transition: 0.3s ease all;
+}
+
+.wrapper .header .nav .navitem {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease all;
+}
+
+.wrapper .header .nav a:hover,
+.wrapper .header .nav .navitem:hover {
+  color: var(--color-orange);
+}
+
+.wrapper .header .nav .navitem .icon {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.wrapper .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 80vh;
+  margin-top: 20px;
+}
+
+.wrapper .hero .heading {
+  color: var(--color-black);
+  font-weight: 400;
+  font-size: 3.5rem;
+  font-family: var(--font-base);
+}
+
+.wrapper .hero {
+  background: linear-gradient(42deg, #ffebd0, #ffc431, #ffe4ae);
+  background-size: 600% 600%;
+
+  -webkit-animation: GradientAnim 11s ease infinite;
+  -moz-animation: GradientAnim 11s ease infinite;
+  animation: GradientAnim 11s ease infinite;
+}
+
+.wrapper .about {
+  color: var(--color-black);
+  margin-top: 20px;
+}
+
+.wrapper .about .header {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.wrapper .about .paragraph {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.wrapper .about .paragraph .question {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.wrapper .about .paragraph .answer {
+  font-size: 1.1rem;
+}
+
+.wrapper .breaker {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+  background: linear-gradient(42deg, #ffebd0, #ffc431, #ffe4ae);
+  background-size: 600% 600%;
+
+  -webkit-animation: GradientAnim 11s ease infinite;
+  -moz-animation: GradientAnim 11s ease infinite;
+  animation: GradientAnim 11s ease infinite;
+}
+
+.wrapper .breaker .header {
+  font-family: var(--font-base);
+  font-size: 3.5rem;
+  color: var(--color-black);
+}
+
+.wrapper .prices {
+  color: var(--color-black);
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.wrapper .prices .header {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+.wrapper .prices .pricesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  min-height: 40vh;
+  align-items: center;
+  list-style-type: none;
+}
+
+.wrapper .prices .pricesList .item {
+  padding: 20px;
+  border: 1px solid #80808067;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+}
+
+.wrapper .prices .pricesList .item .itemHeader {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.wrapper .prices .pricesList .item .line {
+  width: 100%;
+  height: 1px;
+  background-color: #80808067;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.wrapper .prices .pricesList .item .features {
+  padding-left: 20px;
+}
+.wrapper .prices .pricesList .item .feature {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.wrapper .prices .pricesList .item .itemPrice {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wrapper .team {
+  margin-top: 50px;
+  color: var(--color-black);
+}
+
+.wrapper .team .header {
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+.wrapper .team .images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.wrapper .team .images img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.wrapper .team .images .eldar,
+.wrapper .team .images .esmin {
+  text-align: center;
+}
+
+.wrapper .team .images .eldar .headling,
+.wrapper .team .images .esmin .headling {
+  margin-top: 20px;
+}
+
+@-webkit-keyframes GradientAnim {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
+}
+@-moz-keyframes GradientAnim {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
+}
+@keyframes GradientAnim {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
 }

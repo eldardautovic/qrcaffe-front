@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import style from "./Caffe.module.css";
 import axios from "axios";
 import { AiOutlineRollback } from "react-icons/ai";
+import Header from "./Header";
 
 const Caffe = () => {
   const params = useParams();
@@ -58,6 +59,7 @@ const Caffe = () => {
 
   return (
     <div className={style.wrapper}>
+      <Header />
       <Link to="/ucp/">
         <AiOutlineRollback fontSize={24} className={style.icon} />
       </Link>

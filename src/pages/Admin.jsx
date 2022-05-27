@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import style from "./Admin.module.css";
 import Form from "../components/Header/Form";
 import Caffes from "../components/Header/Caffes";
-
+import Header from "../components/Header/Header";
 const Admin = () => {
   const loggedIn = useSelector((state) => state.user.loggedIn);
   const dispatch = useDispatch();
@@ -18,6 +18,7 @@ const Admin = () => {
 
   return (
     <div className={style.wrapper}>
+      <Header />
       {!loggedIn && <Form logInUser={logInUser} pw={pw} />}
 
       {loggedIn && (

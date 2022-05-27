@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IoMdCheckmark, IoMdClose } from "react-icons/io";
 import { AiOutlineRollback } from "react-icons/ai";
 import { getOrders } from "../../store/caffes/caffeReducer";
+import Header from "./Header";
 const Statement = () => {
   const orders = useSelector((state) => state.caffe.caffeStatement);
 
@@ -19,6 +20,7 @@ const Statement = () => {
 
   return (
     <div>
+      <Header />
       <Link to="/ucp/">
         <AiOutlineRollback fontSize={24} className={style.icon} />
       </Link>

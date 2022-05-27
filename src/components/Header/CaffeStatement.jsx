@@ -6,6 +6,7 @@ import style from "./CaffeStatement.module.css";
 import { IoMdCheckmark, IoMdClose } from "react-icons/io";
 import { AiOutlineRollback } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const CaffeStatement = () => {
   const orders = useSelector((state) => state.orders.orders);
@@ -20,6 +21,7 @@ const CaffeStatement = () => {
   return (
     <>
       <div>
+        <Header />
         <Link to={`/caffe/${params.caffeId}`}>
           <AiOutlineRollback fontSize={24} className={style.icon} />
         </Link>

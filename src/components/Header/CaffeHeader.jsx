@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import style from "./CaffeHeader.module.css";
+
 import Modal from "./Modal";
+
+import {FaRegArrowAltCircleRight  as Arrow} from "react-icons/fa";
+
+
+import style from "./CaffeHeader.module.css";
+
 
 const CaffeHeader = ({ name, id }) => {
   const [opened, setOpened] = useState(false);
@@ -8,7 +14,7 @@ const CaffeHeader = ({ name, id }) => {
 
   return (
     <div className={style.header}>
-      <h1>Caffe panel {name}</h1>
+      <h1>Caffe panel <Arrow fontSize="1.2rem"/> {name}</h1>
       <div className={style.profile}>
         <div
           className={style.pic}

@@ -5,6 +5,7 @@ import axios from "axios";
 import { AiOutlineRollback } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { userActions } from "../../store/user/userSlice";
+import Header from "./Header";
 
 const CaffeSettings = () => {
   const params = useParams();
@@ -62,6 +63,7 @@ const CaffeSettings = () => {
 
   return (
     <div className={style.wrapper}>
+      <Header />
       <Link to={`/caffe/${params.caffeId}`}>
         <AiOutlineRollback fontSize={24} className={style.icon} />
       </Link>
