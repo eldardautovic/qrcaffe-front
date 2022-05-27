@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# QR CAFFE - FRONTEND
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ovo je front-end porcija projekta, samim tim ovdje se nalaze svi potrebni fajlovi za pokretanje front-enda.
 
-## Available Scripts
+## Tehnologija koristena
 
-In the project directory, you can run:
+Programski jezik koji je koristen za pravljenje ovog projekta jeste primarno JavaScript, tacnije njegov framework po imenu React.js.
 
-### `npm start`
+  - [JSX](https://reactjs.org/docs/introducing-jsx.html)
+  - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  - [React.js](https://reactjs.org/)
+  - [Socket.io](https://socket.io/)
+  - [React Redux](https://react-redux.js.org/)
+  - [React Redux toolkit](https://redux-toolkit.js.org/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pokretanje projekta
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Projekt se pokrece veoma jednostavno, sve sto trebate uraditi jeste klonirati repository i upisati sljedece komande u terminal: 
+  
+Prva komanda je: 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ```npm install```
+  
+Ona ce da se preuzme sve dependency-e koji su potrebni za pokretanje i razvijanje ovog projekta.
 
-### `npm run build`
+Druga komanda je (uz predpostavku da ste pokrenuli back-end):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```npm start```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ova komanda ce da pokrene React aplikaciju i da je servira na vas lokalni host, ukoliko se automatski ne otvori aplikacija u vasem browseru mozete pronaci istu na linku: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```http://localhost:3000```
 
-### `npm run eject`
+## Rute
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Svaka web aplikacija ima svoje rute radi lakseg funkcionisanja i izbjegavanja natrpavanja jedne stranice pa tako i ova. Ideja je imati 4 glavne stranice, a one su: 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Landing page (localhost:3000/)
+  - Admin panel (localhost:3000/ucp)
+  - Caffe panel (localhost:3000/caffe/:caffeId)
+  - Client panel (localhost:3000/order/:caffeId/:tableId)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Napomena:
+  Front-end ne moze funkcionisati ukoliko back-end nije upaljen.
