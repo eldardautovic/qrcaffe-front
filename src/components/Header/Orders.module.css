@@ -22,7 +22,7 @@
   cursor: pointer;
   background-color: #d85737;
   border-radius: 5px;
-  transition: .3s ease all;
+  transition: 0.3s ease all;
 }
 
 .exit:hover {
@@ -50,7 +50,8 @@
   font-size: 1.9rem;
   padding-left: 20px;
   margin-bottom: 20px;
-  width: 100px;
+  width: 200px;
+  line-height: 50px;
   overflow-wrap: normal;
   color: var(--color-black);
 }

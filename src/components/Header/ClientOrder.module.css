@@ -1,0 +1,148 @@
+.wrapper {
+  padding: 20px 50px;
+  margin-top: 50px;
+  background-color: white;
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.wrapper .table {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.wrapper .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  list-style-type: none;
+}
+
+.wrapper .items .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  background-color: var(--color-orange);
+  transition: 0.3s ease all;
+  border-radius: 5px;
+}
+
+.wrapper .items .item h1 {
+  font-size: 1.2rem;
+}
+
+.wrapper .items .item:hover {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-orange);
+  cursor: pointer;
+}
+
+.header {
+  font-size: 2.5rem;
+}
+
+.wrapper .all span {
+  font-weight: 400;
+}
+
+.wrapper .all {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.wrapper .content {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.wrapper .orders {
+  margin-top: 10px;
+  padding-left: 90px;
+}
+
+.wrapper .note {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.wrapper .note label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper .note input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: var(--color-orange);
+  width: 100%;
+  transition: 0.2s ease all;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.wrapper .note input:focus {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-orange);
+}
+
+.wrapper .buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .buttons > * {
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  padding: 5px 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  border-radius: 20px;
+}
+
+.wrapper .buttons .order {
+  background-color: var(--color-orange);
+}
+
+.wrapper .buttons .cancel {
+  background-color: #fa5228;
+}
+
+.wrapper .buttons .cancel:hover {
+  background-color: var(--color-white);
+  color: #fa5228;
+  border: 2px solid #fa5228;
+}
+
+.wrapper .buttons .order:hover {
+  background-color: var(--color-white);
+  color: var(--color-orange);
+  border: 2px solid var(--color-orange);
+}
+
+.wrapper .error {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #fa5228;
+}

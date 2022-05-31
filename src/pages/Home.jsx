@@ -24,8 +24,8 @@ const Home = () => {
             <a href="#prices">Cijene</a>
           </li>
           <li className={style.navitem}>
-            <LoIcon className={style.icon} fontSize="1.3rem" />
             <a href="#hi">Prijava</a>
+            <LoIcon className={style.icon} fontSize="1.3rem" />
           </li>
         </ul>
       </header>
@@ -115,41 +115,10 @@ const Home = () => {
                 <p>24/7 podrska</p>
               </li>
               <li className={style.feature}>
-                <p>Specijalni QR kod po zelji</p>
+                <p>Mjesecna analiza</p>
               </li>
             </ul>
             <h1 className={style.itemPrice}>250 BAM/mjesecno</h1>
-          </li>
-          <li className={style.item}>
-            <h1 className={style.itemHeader}>Premium+</h1>
-            <div className={style.line}></div>
-            <ul className={style.features}>
-              <li className={style.feature}>
-                <p>Pristup panelu</p>
-              </li>
-              <li className={style.feature}>
-                <p>Pristup izvjestaju</p>
-              </li>
-              <li className={style.feature}>
-                <p>Pristup Podesavanjima</p>
-              </li>
-              <li className={style.feature}>
-                <p>24/7 podrska</p>
-              </li>
-              <li className={style.feature}>
-                <p>Specijalni QR kod po zelji</p>
-              </li>
-              <li className={style.feature}>
-                <p>Zahvalnica na sajtu</p>
-              </li>
-              <li className={style.feature}>
-                <p>Pristup BETA testiranjima</p>
-              </li>
-              <li className={style.feature}>
-                <p>Besplatno mjenjanje imena</p>
-              </li>
-            </ul>
-            <h1 className={style.itemPrice}>270 BAM/mjesecno</h1>
           </li>
         </ul>
       </section>
